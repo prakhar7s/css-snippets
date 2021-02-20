@@ -1,0 +1,18 @@
+export const colorCodes = [
+  { colorId: "color0001", colorOne: "#f40076", colorTwo: "#df98fa" },
+  { colorId: "color0002", colorOne: "#f06966", colorTwo: "#fad6a6" },
+  { colorId: "color00093", colorOne: "#ed7b84", colorTwo: "#9055ff" },
+  { colorId: "color0004", colorOne: "#402662", colorTwo: "#3900a6" },
+  { colorId: "color0005", colorOne: "#0b63f6", colorTwo: "#003cc5" },
+  { colorId: "color0006", colorOne: "#d6ff7f", colorTwo: "#00b3cc" },
+  { colorId: "color0007", colorOne: "#e233ff", colorTwo: "#ff6b00" },
+  { colorId: "color0008", colorOne: "#df98fa", colorTwo: "#9055ff" },
+  { colorId: "color00009", colorOne: "#ff0076", colorTwo: "#590fb7" },
+  { colorId: "color00010", colorOne: "#9055ff", colorTwo: "#13e2da" },
+  { colorId: "color00011", colorOne: "#f14658", colorTwo: "#dc2537" },
+  { colorId: "color00012", colorOne: "#f40076", colorTwo: "#342711" },
+  { colorId: "color00013", colorOne: "#000066", colorTwo: "#6699ff" },
+  { colorId: "color00014", colorOne: "#fa7cbb", colorTwo: "#f14658" },
+  { colorId: "color00015", colorOne: "#737dfe", colorTwo: "#ffcac9" },
+  { colorId: "color00016", colorOne: "#2f80ed", colorTwo: "#b2ffda" },
+];

@@ -1,0 +1,47 @@
+.css-tricks {
+  position: relative;
+  h1 {
+    margin: 20px 35px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .copied-msg {
+    position: fixed;
+    bottom: 25px;
+    left: 40%;
+    z-index: 1;
+    background-color: black;
+    width: 250px;
+    font-size: 13px;
+    color: white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    margin-left: auto;
+
+    .close-copied-msg {
+      cursor: pointer;
+      .MuiSvgIcon-root {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .css-tricks {
+    .copied-msg {
+      left: 25%;
+    }
+  }
+}
+@media screen and (max-width: 440px) {
+  .css-tricks {
+    .copied-msg {
+      left: 18%;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.color-card {
+  height: 315px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  position: relative;
+
+  .color-preview {
+    height: 220px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .lower {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 80px;
+    position: relative;
+
+    .colors {
+      display: flex;
+      position: relative;
+      height: 50px;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        position: absolute;
+        left: 48%;
+        top: 9px;
+      }
+
+      h4 {
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+
+    .copy-btn {
+      background: transparent;
+      border: none;
+      outline: 0;
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+      background: black;
+      color: white;
+      width: 100px;
+      height: 30px;
+      border: 1px solid black;
+      border-radius: 3px;
+
+      &:hover {
+        background: transparent;
+        color: black;
+      }
+    }
+  }
+}

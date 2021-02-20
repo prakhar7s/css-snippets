@@ -1,0 +1,227 @@
+.color-cards {
+  position: relative;
+
+  .heading {
+    text-align: center;
+    margin: 29px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .previews {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 4em;
+    place-content: center;
+    padding: 20px;
+  }
+
+  .copy-color-modal {
+    background: rgba(7, 7, 7, 0.6);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    backdrop-filter: blur(0.5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+
+    .modal-header {
+      height: 65px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgb(1, 1, 8);
+      backdrop-filter: blur(20px);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      h4 {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      .back-btn {
+        background: transparent;
+        outline: none;
+        border: 0;
+        color: white;
+        margin: 0 20px;
+        cursor: pointer;
+        font-weight: 800;
+      }
+    }
+    .modal-main {
+      min-width: 620px;
+      min-height: 300px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      background: white;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+
+      .modal-main-nav,
+      .modal-main-content,
+      .modal-main-footer {
+        width: 100%;
+      }
+
+      .modal-main-nav {
+        background: black;
+        padding: 12px 13px;
+        height: 44px;
+        border-radius: 5px 5px 0 0;
+
+        span {
+          font-size: 17px;
+          margin: 0 10px;
+          cursor: pointer;
+          height: 32px;
+          display: inline-block;
+        }
+
+        span.active-nav {
+          border-bottom: 3px solid red;
+        }
+      }
+
+      .modal-main-content {
+        flex: 1;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .heading {
+          font-size: 17px;
+          color: red;
+        }
+
+        .modal-copied-notification {
+          position: absolute;
+          left: 50%;
+          top: 55%;
+          z-index: 100;
+          transform: translate(-50%, -50%);
+          width: 100px;
+          height: 70px;
+          color: black;
+          transition: 1s all;
+          opacity: 0;
+        }
+
+        .modal-copied-notification.show-toast {
+          animation: 0.6s copiedNoti linear forwards;
+          opacity: 1;
+        }
+
+        @keyframes copiedNoti {
+          90% {
+            font-size: 50px;
+            opacity: 0;
+            transform: translate(-80px, -40px);
+          }
+
+          100% {
+            opacity: 0;
+          }
+        }
+
+        h2 {
+          font-size: 20px;
+          text-align: center;
+          margin: 20px;
+          font-weight: 400;
+        }
+
+        .modal-main-background {
+          display: flex;
+        }
+
+        .modal-main-font {
+          display: none;
+        }
+
+        .modal-main-font,
+        .modal-main-background {
+          display: flex;
+          flex-direction: column;
+
+          p {
+            font-size: 17px;
+            margin: 10px 20px;
+            color: green;
+            text-align: left;
+          }
+        }
+      }
+
+      .modal-main-footer {
+        button {
+          background-color: transparent;
+          border: none;
+          outline: 0;
+          width: 50px;
+          height: 40px;
+          font-weight: 500;
+          font-size: 14px;
+          float: right;
+          margin: 10px;
+          cursor: pointer;
+          color: rgb(40, 133, 255);
+          text-transform: uppercase;
+          border: 1px solid rgb(40, 133, 255);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .color-cards {
+    .previews {
+      grid-template-columns: 300px;
+    }
+
+    .copy-color-modal {
+      .modal-main {
+        max-width: 420px;
+        min-width: 420px;
+        margin: 0 20px;
+        font-size: 15px;
+
+        .modal-main-content {
+          .modal-main-font,
+          .modal-main-background {
+            p {
+              font-size: 15px;
+              margin: 10px;
+              color: green;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .color-cards {
+    .copy-color-modal {
+      .modal-main {
+        min-width: 340px;
+      }
+    }
+  }
+}
