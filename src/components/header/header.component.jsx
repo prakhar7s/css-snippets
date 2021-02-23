@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="app-name">
-        <Link to="/">
+        <Link to="/css-snippets">
           <div className="left">
             <ChevronLeftOutlinedIcon />
           </div>

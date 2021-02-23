@@ -1,8 +1,22 @@
 const CSSTricksList = [
   {
     CSSTrickID: "CSSTrick001",
-    title: "CSS Trick 1",
-    relatedTopics: [],
+    title:
+      "Whenever text in a container overflows we can use this trick, it will put '.....' at the last of the text.",
+    tags: [
+      "ellipse",
+      "overflow",
+      "ellipse",
+      "overflow",
+      "ellipse",
+      "overflow",
+      "ellipse",
+      "overflow",
+      "ellipse",
+      "overflow",
+      "ellipse",
+      "overflow",
+    ],
     code: [
       "background-color: rgba(0, 0, 0, 0.5);",
       "height: 100%;",
@@ -12,19 +26,19 @@ const CSSTricksList = [
   {
     CSSTrickID: "CSSTrick002",
     title: "CSS Trick 2",
-    relatedTopics: [],
+    tags: [],
     code: ["background-color: rgba(0, 0, 0, 0.5);", "height: 100%;", "line2"],
   },
   {
     CSSTrickID: "CSSTrick003",
     title: "CSS Trick 3",
-    relatedTopics: [],
+    tags: [],
     code: ["background-color: rgba(0, 0, 0, 0.5);", "height: 100%;", "line2"],
   },
   {
     CSSTrickID: "CSSTrick004",
     title: "CSS Trick 4",
-    relatedTopics: [],
+    tags: [],
     code: ["background-color: rgba(0, 0, 0, 0.5);", "height: 100%;", "line2"],
   },
 ];

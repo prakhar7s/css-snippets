@@ -7,7 +7,7 @@ import LandingComponent from "../components/landing-component/landing-component.
 
 const Routes = () => (
   <Switch>
-    <Route path="/" component={LandingComponent} exact />
+    <Route path="/css-snippets" component={LandingComponent} exact />
     <Route path="/css-snippets/gradient-colors" component={ColorCards} />
     <Route path="/css-snippets/css-tricks" exact component={CSSTricks} />
   </Switch>

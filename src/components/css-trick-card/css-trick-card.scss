@@ -9,11 +9,29 @@
     font-size: 22px;
     color: #202124;
     margin: 10px;
+    font-weight: 400;
+  }
+
+  .tags {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .tag {
+      margin: 10px 9px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background-color: rgb(251, 153, 41);
+      color: white;
+      font-size: 18px;
+    }
   }
 
   .code-container {
     margin: 20px 0;
-    background-color: #20ffaa42;
+    background-color: rgba(142, 253, 146, 1);
+    backdrop-filter: blur(10px);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     color: black;

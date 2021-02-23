@@ -1,0 +1,113 @@
+.footer {
+  min-height: 50vh;
+  background: rgba(13, 8, 32, 1);
+  display: flex;
+  align-items: center;
+  color: white;
+
+  .social-media-links,
+  #contact-form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .social-media-links {
+    p {
+      font-size: 18px;
+      margin: 50px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      margin: 20px 10px;
+
+      .MuiSvgIcon-root {
+        font-size: 32px;
+        box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.1);
+        color: rgb(250, 97, 97);
+      }
+    }
+  }
+
+  #contact-form {
+    padding: 20px;
+    border-left: 1px solid rgba(129, 128, 128, 0.397);
+
+    p {
+      text-align: left;
+      width: 45%;
+      margin: 10px;
+    }
+
+    input {
+      padding: 10px;
+      margin: 15px 0px;
+      width: 45%;
+      outline: none;
+      box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.25);
+      border: 0;
+      border-radius: 4px;
+    }
+
+    button {
+      outline: none;
+      border: 0;
+      width: 17%;
+      height: 35px;
+      align-self: flex-start;
+      text-transform: uppercase;
+      margin: 20px;
+      margin-left: 28%;
+      border-radius: 5px;
+      background-color: rgb(250, 97, 97);
+      color: white;
+      font-weight: 700;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .footer {
+    flex-direction: column-reverse;
+    padding: 0 20px;
+
+    .social-media-links,
+    #contact-form {
+      width: 100%;
+    }
+
+    #contact-form {
+      padding: 50px 0;
+      border-bottom: 1px solid rgba(129, 128, 128, 0.397);
+      border-left: none;
+      align-items: flex-start;
+      padding-left: 60px;
+
+      input {
+        width: 75%;
+      }
+      button {
+        width: 90px;
+        margin-left: 0;
+      }
+    }
+
+    .social-media-links {
+      padding: 30px 0;
+
+      p {
+        margin: 20px;
+      }
+
+      a {
+        .MuiSvgIcon-root {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
