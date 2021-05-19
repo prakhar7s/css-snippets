@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import "./header.styles.scss";
@@ -6,38 +6,38 @@ import "./header.styles.scss";
 // ICONS
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
-import ChevronLeftOutlinedIcon from "@material-ui/icons/ChevronLeftOutlined";
-import ChevronRightOutlinedIcon from "@material-ui/icons/ChevronRightOutlined";
 
-const Header = () => {
-  const hamburgerMenu = useRef();
+import ColorLensIcon from "@material-ui/icons/ColorLens";
 
-  const showHamburgerMenu = () => {
-    hamburgerMenu.current.style.display = "block";
-  };
+import { toggleHamburgerMenu } from "../../redux/features/features.actions";
+import { connect } from "react-redux";
 
-  const hideHamburgerMenu = () => {
-    hamburgerMenu.current.style.display = "none";
-  };
+const Header = ({ toggleHamburgerMenu, hamburgerMenuValue }) => {
   return (
     <div className="header">
       <div className="app-name">
         <Link to="/css-snippets">
-          <div className="left">
-            <ChevronLeftOutlinedIcon />
+          <span className="codes first">V</span>
+          <div className="main-icon">
+            <ColorLensIcon />
           </div>
-          <div className="right">
-            <ChevronRightOutlinedIcon />
-          </div>
+          <span className="codes">&#47;</span>
+          <span className="codes last">V</span>
           <span>CSS Snippets</span>
         </Link>
       </div>
-      <div onClick={() => showHamburgerMenu()} className="hamburger-menu-icon">
+      <div
+        onClick={() => toggleHamburgerMenu()}
+        className="hamburger-menu-icon"
+      >
         <MenuIcon />
       </div>
-      <div ref={hamburgerMenu} className="hamburger-menu-container">
+      <div
+        style={{ display: hamburgerMenuValue ? "block" : "none" }}
+        className="hamburger-menu-container"
+      >
         <div className="hamburger-menu">
-          <div onClick={() => hideHamburgerMenu()} className="close-btn">
+          <div onClick={() => toggleHamburgerMenu()} className="close-btn">
             <CloseIcon />
           </div>
           <div className="hamb-links">
@@ -56,4 +56,12 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => ({
+  hamburgerMenuValue: state.features.hamburgerMenu,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  toggleHamburgerMenu: () => dispatch(toggleHamburgerMenu()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

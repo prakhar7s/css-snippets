@@ -23,24 +23,48 @@
     a {
       display: flex;
       align-items: center;
-      .left,
-      .right {
-        .MuiSvgIcon-root {
-          font-size: 32px;
-          font-weight: 600;
+      justify-content: flex-start;
+
+      .codes {
+        font-weight: 500;
+        font-size: 20px;
+        margin: 0 2px;
+
+        &.first {
+          transform: rotate(90deg);
+        }
+
+        &.last {
+          transform: rotate(-90deg);
         }
       }
 
-      .left {
-        color: rgb(0, 233, 0);
+      .main-icon {
+        .MuiSvgIcon-root {
+          color: #2bff00;
+          animation: color-rotate 1.5s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+
+          @keyframes color-rotate {
+            from {
+              filter: hue-rotate(0deg);
+            }
+            to {
+              filter: hue-rotate(360deg);
+            }
+          }
+        }
       }
 
-      .right {
-        color: rgb(253, 77, 77);
+      .MuiSvgIcon-root {
+        font-size: 32px;
+        font-weight: 600;
       }
 
       span {
         margin-left: 10px;
+        font-weight: 600;
       }
     }
   }
@@ -61,9 +85,8 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.65);
     top: 0px;
-    display: none;
     right: 0;
-    display: flex;
+    display: none;
 
     .hamburger-menu {
       width: 55%;

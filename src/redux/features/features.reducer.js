@@ -4,6 +4,7 @@ const {
 
 const INITIAL_STATE = {
   darkMode: false,
+  hamburgerMenu: false,
 };
 
 const featuresReducer = (state = INITIAL_STATE, action) => {
@@ -11,7 +12,13 @@ const featuresReducer = (state = INITIAL_STATE, action) => {
     case featureReducerActionTypes.TOGGLE_EDITOR_MODE:
       return {
         ...state,
-        darkMode: state.darkMode ? false : true,
+        darkMode: !state.darkMode,
+      };
+
+    case featureReducerActionTypes.TOGGLE_HAMBURGER_MENU:
+      return {
+        ...state,
+        hamburgerMenu: !state.hamburgerMenu,
       };
 
     default:

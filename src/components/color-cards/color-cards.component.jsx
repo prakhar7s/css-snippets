@@ -5,7 +5,7 @@ import ColorCard from "../color-card/color-card.component";
 import "./color-cards.styles.scss";
 
 // icons
-import KeyboardBackspaceIcon from "@material-ui/icons/KeyboardBackspace";
+import CloseIcon from "@material-ui/icons/Close";
 import FileCopyOutlinedIcon from "@material-ui/icons/FileCopyOutlined";
 
 const ColorCards = (props) => {
@@ -28,7 +28,7 @@ const ColorCards = (props) => {
     background: -webkit-repeating-linear-gradient(110deg, ${colors[0]},${colors[1]});
     background-clip: text;
     -webkit-text-fill-color: transparent;    
-    `;
+    `.trim();
 
     const isFontCode = fontsCode.current.style.display === "flex";
 
@@ -66,20 +66,6 @@ const ColorCards = (props) => {
       </div>
 
       <div ref={copyColorModal} className="copy-color-modal">
-        <div className="modal-header">
-          <button
-            className="back-btn"
-            onClick={() => {
-              props.history.push("/css-snippets/gradient-colors");
-
-              copyColorModal.current.style.display = "none";
-            }}
-          >
-            <KeyboardBackspaceIcon />
-          </button>
-          <h4>Copy Color</h4>
-        </div>
-
         <div className="modal-main">
           <div className="modal-main-nav">
             <span
@@ -103,14 +89,21 @@ const ColorCards = (props) => {
                 e.target.className = "active-nav";
               }}
             >
-              fonts
+              Fonts
             </span>
+
+            <button
+              className="back-btn"
+              onClick={() => {
+                props.history.push("/css-snippets/gradient-colors");
+
+                copyColorModal.current.style.display = "none";
+              }}
+            >
+              <CloseIcon />
+            </button>
           </div>
           <div className="modal-main-content">
-            <div ref={copiedToast} className="modal-copied-notification">
-              Copied
-            </div>
-
             <h2 className="heading">CSS Code Snippet</h2>
             <div ref={backgroundCode} className="modal-main-background">
               <p>{`background: linear-gradient(130deg, ${
@@ -137,6 +130,9 @@ const ColorCards = (props) => {
           <div className="modal-main-footer">
             <button onClick={copySelectedColor}>
               <FileCopyOutlinedIcon />
+              <div ref={copiedToast} className="modal-copied-notification">
+                Copied
+              </div>
             </button>
           </div>
         </div>

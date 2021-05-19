@@ -1,13 +1,13 @@
 .color-card {
   height: 315px;
   background: white;
-  border-radius: 5px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
   position: relative;
 
   .color-preview {
     height: 220px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 2px 2px 0 0;
   }
 
   .lower {
@@ -25,6 +25,7 @@
       width: 100%;
       justify-content: center;
       align-items: center;
+      user-select: none;
 
       span {
         position: absolute;
@@ -47,10 +48,11 @@
       text-transform: uppercase;
       background: black;
       color: white;
-      width: 100px;
+      width: 120px;
       height: 30px;
       border: 1px solid black;
-      border-radius: 3px;
+      border-radius: 1px;
+      transition: all 0.3s;
 
       &:hover {
         background: transparent;
