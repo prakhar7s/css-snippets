@@ -43,14 +43,14 @@ const Header = ({ toggleHamburgerMenu, hamburgerMenuValue }) => {
           <div className="hamb-links">
             <Link to="/css-snippets/gradient-colors">Gradient Colors</Link>
             <Link to="/css-snippets/css-tricks">CSS Tricks</Link>
-            <Link to="/css-snippets/gradient-colors">Learn More</Link>
+            {/* <Link to="/css-snippets/gradient-colors">Learn More</Link> */}
           </div>
         </div>
       </div>
       <div className="links">
         <Link to="/css-snippets/gradient-colors">Gradient Colors</Link>
         <Link to="/css-snippets/css-tricks">CSS Tricks</Link>
-        <Link to="/css-snippets/gradient-colors">Learn More</Link>
+        {/* <Link to="/css-snippets/gradient-colors">Learn More</Link> */}
       </div>
     </div>
   );

@@ -3,4 +3,30 @@
   background-image: url(../../assets/images/background.jpg);
   background-size: cover;
   background-position: center center;
+  display: grid;
+  place-items: center;
+
+  h1 {
+    text-align: center;
+    font-size: 45px;
+    color: #f54e1b;
+    backdrop-filter: blur(10px);
+    animation: color-rotate 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    @keyframes color-rotate {
+      from {
+        filter: hue-rotate(0deg);
+      }
+      to {
+        filter: hue-rotate(360deg);
+      }
+    }
+  }
+  p {
+    font-size: 18px;
+    color: blue;
+    backdrop-filter: blur(100px);
+  }
 }
