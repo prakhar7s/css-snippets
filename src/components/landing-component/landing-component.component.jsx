@@ -7,8 +7,7 @@ const LandingComponent = () => (
   <div className="landing-component">
     <h1>Welcome!</h1>
     <p>
-      Let't get started{" "}
-      <Link to="css-snippets/gradient-colors">Click Here</Link>
+      Let't get started <Link to="/gradient-colors">Click Here</Link>
     </p>
   </div>
 );
