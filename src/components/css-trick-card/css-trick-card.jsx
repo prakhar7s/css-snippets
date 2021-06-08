@@ -34,7 +34,7 @@ const CSSTrickCard = (props) => {
 
     setTimeout(() => {
       setShowCopied(false);
-    }, 8000);
+    }, 1500);
   };
 
   return (

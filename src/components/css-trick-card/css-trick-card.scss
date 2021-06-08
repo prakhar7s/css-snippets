@@ -6,10 +6,10 @@
   border: 1px solid #dadce0;
   border-radius: 4px;
   .trick-title {
-    text-transform: uppercase;
-    font-size: 15px;
+    font-size: 16px;
     color: #202124;
     margin: 10px;
+    opacity: 0.8;
     font-weight: 400;
   }
 
@@ -23,7 +23,7 @@
       margin: 10px 9px;
       padding: 8px 10px;
       border-radius: 999px;
-      background-color: rgb(251, 153, 41);
+      background-color: rgb(255, 94, 0);
       color: white;
       font-size: 16px;
     }
@@ -80,8 +80,6 @@
       font-size: 18px;
     }
     .code-container {
-      .code {
-      }
       .btns {
         flex-direction: column;
       }

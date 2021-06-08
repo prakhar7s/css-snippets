@@ -41,9 +41,9 @@ const Footer = () => (
     </div>
 
     <form id="contact-form">
-      <p>Contact Us</p>
-      <input type="email" />
-      <input type="text" />
+      <p>Give us feedback</p>
+      <input type="email" placeholder="your email" />
+      <input type="text" placeholder="feedback" />
       <button type="submit">Send</button>
     </form>
   </div>
