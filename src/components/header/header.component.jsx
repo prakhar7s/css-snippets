@@ -23,7 +23,6 @@ const Header = ({ toggleHamburgerMenu, hamburgerMenuValue }) => {
           </div>
           <span className="codes">&#47;</span>
           <span className="codes last">V</span>
-          <span>CSS Snippets</span>
         </Link>
       </div>
       <div
@@ -42,14 +41,14 @@ const Header = ({ toggleHamburgerMenu, hamburgerMenuValue }) => {
           </div>
           <div className="hamb-links">
             <Link to="/css-snippets/gradient-colors">Gradient Colors</Link>
-            <Link to="/css-snippets/css-tricks">CSS Tricks</Link>
+            <Link to="/css-snippets/css-tricks">CSS Snippets</Link>
             {/* <Link to="/css-snippets/gradient-colors">Learn More</Link> */}
           </div>
         </div>
       </div>
       <div className="links">
         <Link to="/css-snippets/gradient-colors">Gradient Colors</Link>
-        <Link to="/css-snippets/css-tricks">CSS Tricks</Link>
+        <Link to="/css-snippets/css-tricks">CSS Snippets</Link>
         {/* <Link to="/css-snippets/gradient-colors">Learn More</Link> */}
       </div>
     </div>
